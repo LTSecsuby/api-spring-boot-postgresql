@@ -16,6 +16,7 @@ import { NoteComponent } from './note/note.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localeRu, 'ru');
 
@@ -42,9 +43,10 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ HttpClientModule ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
