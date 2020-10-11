@@ -1,0 +1,68 @@
+.app-note{
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 120%;
+}
+
+.app-note:hover{
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  font-size: 120%;
+}
+
+.app-note.active{
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  font-size: 120%;
+}
+
+a{
+  font-size: 60%;
+}
+
+.app-note-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: calc(100% - 45px);
+  height: 90%;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.app-note-content-title{
+  color: blue;
+  padding-left: 2%;
+  margin: 10px;
+}
+
+.app-note-content{
+  color: black;
+  padding-left: 2%;
+  margin: 10px;
+  font-size: 110%;
+}
+
+.app-note-date{
+  color: black;
+  padding-left: 2%;
+  margin: 10px;
+  text-align: end;
+  font-size: 80%;
+}

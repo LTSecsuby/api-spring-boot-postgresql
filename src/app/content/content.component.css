@@ -1,0 +1,34 @@
+.app-note-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: calc(100% - 45px);
+  height: 90%;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.app-note-content-title{
+  color: blue;
+  padding-left: 2%;
+  margin: 10px;
+}
+
+.app-note-content{
+  color: black;
+  padding-left: 2%;
+  margin: 10px;
+  font-size: 110%;
+}
+
+.app-note-date{
+  color: black;
+  padding-left: 2%;
+  margin: 10px;
+  text-align: end;
+  font-size: 80%;
+}

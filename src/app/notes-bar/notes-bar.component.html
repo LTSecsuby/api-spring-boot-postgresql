@@ -1,0 +1,6 @@
+<div *ngFor='let elem of getNotes()'>
+  <div (click)="onCheckedActiveNote(elem.id)" class="app-note" [class.active]="elem.id === this.dataService.idChecked">{{ elem.title }}
+   <span> </span><a href='note/{{elem.id}}'>ссылка</a>
+  </div>
+</div>
+
