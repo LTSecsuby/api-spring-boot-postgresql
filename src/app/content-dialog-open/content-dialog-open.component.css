@@ -1,0 +1,54 @@
+.app-input{
+  width: calc(100% - 45px);
+  background-color: white;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 120%;
+  color: #007aff;
+  padding: 10px;
+}
+
+.app-element-option {
+  color: #007aff;
+}
+
+.app-label {
+  color: #007aff;
+  font-size: 16px;
+}
+
+.app-datepicker-input {
+  color: #007aff;
+  padding-top: 10px;
+}
+
+.app-content-dialog-button:hover{
+  background-color: #007aff;
+  color: white;
+}
+
+.app-content-dialog-button{
+  cursor: pointer;
+  background-color: white;
+  color: #007aff;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 150%;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.filter-title {
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: #007aff;
+  padding-top: 10px;
+}
+

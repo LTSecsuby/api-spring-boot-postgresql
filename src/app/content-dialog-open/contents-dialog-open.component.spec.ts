@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentComponent } from './content.component';
+import { ContentsDialogOpenComponent } from './contents-dialog-open.component';
 
-describe('ContentComponent', () => {
-  let component: ContentComponent;
-  let fixture: ComponentFixture<ContentComponent>;
+describe('ContentsComponent', () => {
+  let component: ContentsDialogOpenComponent;
+  let fixture: ComponentFixture<ContentsDialogOpenComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentComponent ]
+      declarations: [ ContentsDialogOpenComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContentComponent);
+    fixture = TestBed.createComponent(ContentsDialogOpenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

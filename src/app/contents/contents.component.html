@@ -1,0 +1,28 @@
+<div *ngIf="isLogin" class="app-content-wrapper">
+
+  <mat-form-field appearance="fill">
+    <h1 class="app-content-title">Фильтр:</h1>
+    <mat-select>
+          <span *ngFor="let item of filterList">
+            <mat-option class="app-element-option" (click)="selectElement(item.model)" [value]=item.name>{{item.name}}</mat-option>
+          </span>
+      <mat-option *ngIf="filterList.length === 0" class="app-element-option"> - </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngFor="let element of filterList">
+    <div *ngIf="element.selected">
+      <h3 class="app-content-title">Добавить фильтр</h3>
+      <span class="app-content-input-search">
+        <input [(ngModel)]="textFilter" placeholder="{{textFilter}}" type="text" class="app-input">
+        <button (click)="getElements()" [disableRipple]="true" color="primary" mat-button class="app-get-button">Найти</button>
+      </span>
+      <div *ngFor="let item of element.value; index as i;">
+        <div class="app-content-element">
+          <span (click)="openDialog(item, element.model)">{{i+1}}. {{item.fullName}} - ID: {{item.id}}</span>
+          <mat-icon class="app-content-element-delete" (click)="onClickDeleteItem(item, element.model)">delete</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

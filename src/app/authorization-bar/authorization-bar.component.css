@@ -1,0 +1,46 @@
+.app-profile-content-wrapper {
+  padding-right: 25px;
+}
+
+.app-profile-user-name {
+  font-size: 24px;
+  color: #007aff;
+}
+
+.app-profile-change-menu-button {
+  cursor: pointer;
+  color: blue;
+}
+
+.app-profile-user-position {
+  color: #007aff;
+}
+
+.app-profile-exit-button {
+
+}
+
+.app-profile-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.app-profile-input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  float: right;
+}
+
+.app-input{
+  width: 30%;
+  background-color: white;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 120%;
+  color: #007aff;
+  padding-left: 15px;
+}

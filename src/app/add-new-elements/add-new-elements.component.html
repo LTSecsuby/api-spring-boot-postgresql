@@ -1,0 +1,36 @@
+<div *ngIf="isLogin">
+
+  <div (click)="onChangeAddMenu()" class="app-show-button" *ngIf="!isChangeAddMenu; else addMenu">
+    <span>{{currentObject.title}}</span>
+  </div>
+  <ng-template #addMenu>
+    <div class="app-add-new-label" *ngFor="let element of currentObject.elements">
+
+      <input *ngIf="element.typeHtmlElement === 'input'" [(ngModel)]="element.data.data" placeholder="{{element.name}}" type="text" class="app-input">
+
+      <mat-form-field *ngIf="element.typeHtmlElement === 'select'" appearance="fill">
+        <span class="app-label">{{element.name}}</span>
+        <mat-select>
+          <span *ngFor="let item of element.data.data">
+            <mat-option class="app-element-option" (click)="selectValue(item.id, element.typeField)" [value]=item.id>{{item.fullName}}</mat-option>
+          </span>
+          <mat-option *ngIf="element.data.data.length === 0" class="app-element-option"> - </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="element.typeHtmlElement === 'date'" appearance="fill">
+        <span class="app-label">{{element.name}}</span>
+        <input class="app-datepicker-input" matInput [(ngModel)]="element.data.data" [matDatepicker]="datepickerDate" disabled>
+        <mat-datepicker-toggle class="app-datepicker-toggle" matSuffix [for]="datepickerDate"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #datepickerDate disabled="false"></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="button-container">
+      <button (click)="createElement(currentObject)" class="app-add-button">Добавить</button>
+      <button (click)="onChangeAddMenu()" class="app-close-button">Закрыть</button>
+    </div>
+
+  </ng-template>
+
+</div>

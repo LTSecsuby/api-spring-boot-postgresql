@@ -1,0 +1,33 @@
+<div class="app-profile-content-wrapper">
+  <span (click)="currentUserService.setCurrentUser(null)" *ngIf="this.isLogin" class="app-profile-content">
+    <span class="app-profile-input">
+      <span>
+        <div class="app-profile-user-name">{{currentUser.firstName}} {{currentUser.lastName}}</div>
+        <div class="app-profile-user-position">{{currentUser.position}}</div>
+      </span>
+      <button [disableRipple]="true" color="primary" mat-button class="app-profile-exit-button">выйти</button>
+    </span>
+  </span>
+  <span *ngIf="!this.isLogin" class="app-profile-content">
+    <input [(ngModel)]="authorizationBody.firstName" placeholder="Имя" type="text" class="app-input">
+    <input [(ngModel)]="authorizationBody.lastName" placeholder="Фамилия" type="text" class="app-input">
+    <input [(ngModel)]="authorizationBody.password" placeholder="Пароль" type="text" class="app-input">
+    <button (click)="getAuthorizationEmployee()" [disableRipple]="true" color="primary" mat-button class="app-profile-exit-button">войти</button>
+  </span>
+  <span *ngIf="false" class="app-profile-content">
+    <input [(ngModel)]="employee.firstName" placeholder="Имя" type="text" class="app-input">
+    <input [(ngModel)]="employee.lastName" placeholder="Фамилия" type="text" class="app-input">
+    <input [(ngModel)]="employee.email" placeholder="Емайл" type="text" class="app-input">
+    <input [(ngModel)]="employee.phone" placeholder="Телефон" type="text" class="app-input">
+    <input [(ngModel)]="employee.position" placeholder="Должность" type="text" class="app-input">
+    <mat-form-field appearance="fill">
+      <span class="app-label">Дата найма</span>
+      <input class="app-datepicker-input" matInput [(ngModel)]="employee.employmentDate" [matDatepicker]="datepickerEmploymentDate" disabled>
+      <mat-datepicker-toggle class="app-datepicker-toggle" matSuffix [for]="datepickerEmploymentDate"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #datepickerEmploymentDate disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <input [(ngModel)]="employee.salary" placeholder="Зарплата" type="text" class="app-input">
+    <input [(ngModel)]="employee.password" placeholder="Пароль" type="text" class="app-input">
+    <button (click)="createEmployee()" [disableRipple]="true" color="primary" mat-button class="app-profile-exit-button">регистрация</button>
+  </span>
+</div>

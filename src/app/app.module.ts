@@ -9,20 +9,26 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ContentComponent } from './content/content.component';
-import { AddNotesBarComponent } from './add-notes-bar/add-notes-bar.component';
-import { NotesBarComponent } from './notes-bar/notes-bar.component';
-import { NoteComponent } from './note/note.component';
+import { AddNewElementsComponent } from './add-new-elements/add-new-elements.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {ContentsComponent} from './contents/contents.component';
+import {AuthorizationBarComponent} from './authorization-bar/authorization-bar.component';
+import {ContentsDialogOpenComponent} from './content-dialog-open/contents-dialog-open.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
 
 registerLocaleData(localeRu, 'ru');
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'note/:id', component: NoteComponent },
   { path: '**', component: MainComponent }
 ];
 
@@ -31,20 +37,26 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    ContentComponent,
-    AddNotesBarComponent,
-    NotesBarComponent,
-    NoteComponent,
-    MainComponent
+    ContentsComponent,
+    AddNewElementsComponent,
+    MainComponent,
+    AuthorizationBarComponent,
+    ContentsDialogOpenComponent
   ],
-  entryComponents: [ NoteComponent ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [ HttpClientModule ],
   bootstrap: [AppComponent]

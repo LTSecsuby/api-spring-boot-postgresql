@@ -1,0 +1,27 @@
+<div class="filter-title">
+  <span>{{currentObject.title}}</span>
+</div>
+<div *ngFor="let element of currentObject.elements">
+
+  <input *ngIf="element.typeHtmlElement === 'input'" [(ngModel)]="element.data.data" placeholder="{{element.name}}" type="text" class="app-input">
+
+  <mat-form-field *ngIf="element.typeHtmlElement === 'select'" appearance="fill">
+    <span class="app-label">{{element.name}}</span>
+    <mat-select>
+          <span *ngFor="let item of element.data.data">
+            <mat-option class="app-element-option" (click)="selectValue(item.id, element.typeField)" [value]=item.id>{{item.fullName}}</mat-option>
+          </span>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="element.typeHtmlElement === 'date'" appearance="fill">
+    <span class="app-label">{{element.name}}</span>
+    <input class="app-datepicker-input" matInput [(ngModel)]="element.data.data" [matDatepicker]="datepickerDate" disabled>
+    <mat-datepicker-toggle class="app-datepicker-toggle" matSuffix [for]="datepickerDate"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #datepickerDate disabled="false"></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button class="app-content-dialog-button" (click)="onNoClick()">Отмена</button>
+  <button class="app-content-dialog-button" [mat-dialog-close]="data.value" cdkFocusInitial>Готово</button>
+</div>

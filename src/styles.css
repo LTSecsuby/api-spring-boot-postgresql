@@ -3,12 +3,39 @@
   outline-offset: 0;
 }
 
+.mat-select-arrow {
+  color: #007aff!important;
+}
+
+.mat-form-field-infix {
+  background-color: white!important;
+  border-radius: 10px!important;
+  padding-left: 5px!important;
+  border: 2px solid black;
+  min-height: 25px;
+}
+
+.mat-select-value {
+  color: #007aff!important;
+  font-size: 16px!important;
+}
+
+.mat-select-panel {
+  background-color: white!important;
+}
+
+.mat-calendar {
+  background-color: rgba(147, 219, 255, 0.48) !important;
+  width: 50vh!important;
+  height: 50vh!important;
+}
+
 textarea {
   resize: none;
 }
 
 input::placeholder, textarea::placeholder {
-  color: blue;
+  color: #007aff;
 }
 
 .wrapper{
@@ -26,8 +53,8 @@ input::placeholder, textarea::placeholder {
   grid-template-columns: minmax(350px, 1fr) 2fr;
   grid-gap: 5px;
   grid-template-areas:
-"header header"
-"navbar content";
+    "header header"
+    "navbar content";
 }
 
 .app-header{

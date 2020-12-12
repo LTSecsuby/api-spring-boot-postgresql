@@ -1,0 +1,76 @@
+.app-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: calc(100% - 45px);
+  height: 90%;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.app-content-title{
+  color: blue;
+  margin: 10px;
+}
+
+.app-content-input-search {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app-element-option {
+  color: #007aff;
+}
+
+.app-content-element {
+  width: calc(80% - 45px);
+  background-color: white;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 120%;
+  color: #007aff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.app-content-element-delete {
+  position: relative;
+  top: 5px;
+  color: #ff3709;
+  opacity: 0.8;
+}
+
+.app-content-element-delete:hover {
+  opacity: 1;
+}
+
+.app-input {
+  width: 30%;
+  background-color: white;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 120%;
+  color: #007aff;
+  padding-left: 15px;
+}
+
+.app-get-button {
+  cursor: pointer;
+  background-color: white;
+  color: #007aff;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.app-get-button:hover{
+  background-color: #007aff;
+  color: white;
+}
